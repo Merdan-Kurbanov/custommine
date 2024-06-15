@@ -1,30 +1,10 @@
 #!/bin/bash
 #wget https://github.com/${GitUser}/
 GitUser="Merdan-Kurbanov"
-if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
-		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
-		exit 1
-fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
 
-clear
-rm -f setup.sh
-exit 0
 fi
 clear
 echo -e "\e[32mloading...\e[0m"
-clear
-mkdir /var/lib/premium-script;
-default_email=$( curl https://raw.githubusercontent.com/${GitUser}/email/main/default.conf )
-clear
 #Nama penyedia script
 echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
 echo ""
